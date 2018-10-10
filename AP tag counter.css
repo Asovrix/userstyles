@@ -1,3 +1,5 @@
+@-moz-document domain("anime-pictures.net")
+
 .tags li > span {
 counter-increment:all
 }
