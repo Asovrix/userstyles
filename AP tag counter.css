@@ -1,7 +1,7 @@
 @-moz-document domain("anime-pictures.net")
 
 .tags li > span {
-counter-increment:all
+counter-increment:alltags
 }
 .tags .green {
 counter-increment:copyright
@@ -25,11 +25,11 @@ counter-increment:rec myrec
 counter-increment:annot
 }
 .tags {
-counter-reset:all copyright character artist other rec myrec annot;
+counter-reset:alltags copyright character artist other rec myrec annot;
 }
 
 #post_tags::after {
-content:""counter(all)" tags total\a"counter(copyright)" copyright(s)\a"counter(character)" character(s)\a"counter(artist)" artist(s)\a"counter(other)" other\a"counter(rec)"("counter(myrec)") recommended\a"counter(annot)" tag rectangle(s)";
+content:""counter(alltags)" tags total\a"counter(copyright)" copyright(s)\a"counter(character)" character(s)\a"counter(artist)" artist(s)\a"counter(other)" other\a"counter(rec)"("counter(myrec)") recommended\a"counter(annot)" tag rectangle(s)";
 position:fixed;
 white-space:pre;
 font-family:Verdana,Calibri,Arial,sans-serif;
