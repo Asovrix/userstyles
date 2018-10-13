@@ -1,0 +1,40 @@
+#tag-list ul li a:first-child {
+counter-increment:alltags;
+}
+#tag-list .category-3 {
+counter-increment:green;
+}
+#tag-list .category-4 {
+counter-increment:blue;
+}
+#tag-list .category-1 {
+counter-increment:orange;
+}
+#tag-list .category-0 {
+counter-increment:other;
+}
+#tag-list .category-5 {
+counter-increment:meta
+}
+#tag-list {
+counter-reset:alltags green blue orange meta other;
+}
+
+#tag-list:after {
+content:""counter(alltags)" tags total\a"counter(green)" copyright(s)\a"counter(blue)" character(s)\a"counter(orange)" artist(s)\a"counter(meta)" meta\a"counter(other)" other";
+position:fixed;
+white-space:pre;
+font-family:Verdana,Calibri,Arial,sans-serif;
+font-size:8pt;
+line-height:1.2;
+color:white;
+bottom:-59px;
+right:3px;
+outline:3px ridge silver;
+background:linear-gradient(to bottom,#000,#000 18%,#A0A 18%,#A0A 33%,#0A0 33%,#0A0 52%,#A00 52%,#A00 70%,#FF8800 70%,#FF8800 85%,#0073FF 85%,#0073FF 100%); 
+z-index:9999;
+opacity:.5;
+transition: opacity .2s 2s, bottom .2s 2s
+}
+#tag-list:hover:after {bottom:3px;opacity:1;transition: bottom .2s, opacity .2s}
+}
