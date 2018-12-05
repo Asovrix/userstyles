@@ -15,6 +15,9 @@ counter-increment:other all
 .tags li .not_my_tag_border {
 counter-increment:rec
 }
+.tags li .not_my_tag_border[data-rect] {
+counter-increment:rec annot
+}
 .tags li[title="by Asovrix"] .not_my_tag_border {
 counter-increment:rec myrec
 }
@@ -33,7 +36,7 @@ font-family:Verdana,Calibri,Arial,sans-serif;
 font-size:8pt;
 line-height:1.2;
 color:white;
-bottom:-78px;
+bottom:-72px;
 left:3px;
 outline:3px ridge silver;
 background:linear-gradient(to bottom,#000,#000 14%,#008039 14%,#008039 29%,#069 29%,#069 43%,#ff8c00 43%,#ff8c00 57%,#555 57%,#555 71%,#f00 71%,#f00 86%,#000 86%,#000 100%); 
