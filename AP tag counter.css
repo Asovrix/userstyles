@@ -21,6 +21,9 @@ counter-increment:rec annot
 .tags li[title="by Asovrix"] .not_my_tag_border {
 counter-increment:rec myrec
 }
+.tags li[title="by Asovrix"] .not_my_tag_border[data-rect] {
+counter-increment:myrec rec annot
+}
 .tags li a[data-rect] {
 counter-increment:annot
 }
