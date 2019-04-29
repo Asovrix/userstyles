@@ -1,10 +1,19 @@
 @-moz-document domain("anime-pictures.net") {
-  
+/*
+On lines 27 & 30 replace any instance of "Your_Nickname" with your own nickname (NOT login) on the site. Those are supposed to be used to count your own recommended tags.
+Appended tags are shown as: A(B)[C]
+Where A = tags not added not by uploader (highlighted by red border on tag list)
+B = tags added by all moderators
+C = tags added by you
+*/
 .tags .green {
 counter-increment:copyright all
 }
+.tags .big_tag.not_my_tag_border, .tags li[class=""] .not_my_tag_border {
+counter-increment:rec
+}
 .tags .blue {
-counter-increment:character all
+counter-increment:char all
 }
 .tags .orange {
 counter-increment:artist all
@@ -12,27 +21,33 @@ counter-increment:artist all
 .tags li[class=""] {
 counter-increment:other all
 }
-.tags li .not_my_tag_border {
-counter-increment:rec
+.tags li a[data-rect] {
+counter-increment:annotation
+}
+.tags li[title="by Your_Nickname"] .not_my_tag_border {
+counter-increment:mysugg modsugg rec
+}
+.tags li[title="by Your_Nickname"] .not_my_tag_border[data-rect] {
+counter-increment:mysugg rec annotation
+}
+.tags li[title="by stalkerg"] .not_my_tag_border,
+.tags li[title="by t-IX"] .not_my_tag_border,
+.tags li[title="by Weyde"] .not_my_tag_border,
+.tags li[title="by 7nik"] .not_my_tag_border,
+.tags li[title="by Anny"] .not_my_tag_border,
+.tags li[title="by Alexa"] .not_my_tag_border,
+.tags li[title="by Cold_Crime"] .not_my_tag_border {
+counter-increment:rec modsugg
 }
 .tags li .not_my_tag_border[data-rect] {
-counter-increment:rec annot
-}
-.tags li[title="by Asovrix"] .not_my_tag_border {
-counter-increment:rec myrec
-}
-.tags li[title="by Asovrix"] .not_my_tag_border[data-rect] {
-counter-increment:myrec rec annot
-}
-.tags li a[data-rect] {
-counter-increment:annot
+counter-increment:rec annotation
 }
 .tags {
-counter-reset:all copyright character artist other rec myrec annot;
+counter-reset:all copyright char artist other rec mysugg annotation modsugg;
 }
 
 #post_tags::after {
-content:""counter(all)" tags total\a"counter(copyright)" copyright(s)\a"counter(character)" character(s)\a"counter(artist)" artist(s)\a"counter(other)" other\a"counter(rec)"("counter(myrec)") recommended\a"counter(annot)" tag rectangle(s)";
+content:""counter(all)" tags total\a"counter(copyright)" copyright(s)\a"counter(char)" character(s)\a"counter(artist)" artist(s)\a"counter(other)" other\a"counter(rec)"("counter(modsugg)")["counter(mysugg)"] appended\a"counter(annotation)" tag rectangle(s)";
 position:fixed;
 white-space:pre;
 font-family:Verdana,Calibri,Arial,sans-serif;
@@ -47,7 +62,7 @@ z-index:9000;
 opacity:.5;
 transition: opacity .2s 2s, bottom .2s 2s
 }
-#post_tags:hover::after {bottom:23px;opacity:1;transition: bottom .2s, opacity .2s}
+#post_tags:hover::after {bottom:33px;opacity:1;transition: bottom .2s, opacity .2s}
   
 @media screen and (min-width: 1630px) {
 #post_tags::after {left:299px}
