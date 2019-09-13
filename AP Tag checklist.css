@@ -1,0 +1,54 @@
+/*Shows a compact tag checklist which shows if there are most commonly types of tags present on the picture: gender, hair length, hair color, eye color, looking (at viewer/away/down/up/back)
+It also shows the current rating of the picture with the color; SFW - green, pink (light erotic) & orange (erotic) & red (hard erotic) - NSFW.*/
+
+#tag_li_73131::after,#tag_li_125::after,#tag_li_231::after,#tag_li_1366::after,#tag_li_21508::after,#tag_li_13047::after,#tag_li_54::after,#tag_li_58::after,#tag_li_11383::after,#tag_li_8816::after,#tag_li_712::after,#tag_li_104::after,#tag_li_156::after,#tag_li_11::after,#tag_li_22231::after,#tag_li_2266::after,#tag_li_132::after,#tag_li_715::after,#tag_li_22::after,#tag_li_150::after,#tag_li_349::after,#tag_li_8683::after,#tag_li_991::after,#tag_li_6525::after,#tag_li_1239::after,#tag_li_117::after,#tag_li_10::after,#tag_li_11953::after,#tag_li_11281::after,#tag_li_895::after,#tag_li_373::after,#tag_li_2518::after,#tag_li_3695::after,#tag_li_330::after,#tag_li_356::after,#tag_li_12210::after,#tag_li_16425::after,#tag_li_24::after,#tag_li_32985::after,#tag_li_17057::after,#tag_li_11382::after,#tag_li_13222::after,#tag_li_15704::after,#tag_li_108::after {
+position:fixed;
+white-space:pre;
+font-family:Verdana,Calibri,Arial,sans-serif;
+font-size:9pt;
+line-height:1.5;
+right:370px;
+color:white;
+z-index:11;
+background:green;
+}
+
+#tags_sidebar::after {
+content:"⍰SFW\a☐ gender\a☐ hair length\a☐ hair color\a☐ eye color\a☐ looking*";
+position:fixed;
+white-space:pre;
+font-family:Verdana,Calibri,Arial,sans-serif;
+font-size:9pt;
+line-height:1.5;
+top:70px;
+right:300px;
+color:black;
+z-index:10;
+background:linear-gradient(to bottom, green, green 17%, white 17%, white 100%);
+}
+#tag_li_73131::after,#tag_li_125::after,#tag_li_231::after {content:"☑ NSFW       ";top:70px;right:300px}
+#tag_li_73131::after {background:#f9f;z-index:12;top:70px;}
+#tag_li_125::after {background:#f90;z-index:13;top:70px;}
+#tag_li_231::after {background:#f00;z-index:14;top:70px;}
+
+#tag_li_1366::after,#tag_li_21508::after,#tag_li_13047::after {
+content:"☑";
+top:88px
+}
+#tag_li_54::after,#tag_li_58::after,#tag_li_11383::after {
+content:"☑";
+top:106px
+}
+#tag_li_8816::after,#tag_li_712::after,#tag_li_104::after,#tag_li_156::after,#tag_li_11::after,#tag_li_22231::after,#tag_li_2266::after,#tag_li_132::after,#tag_li_715::after,#tag_li_22::after,#tag_li_150::after,#tag_li_349::after,#tag_li_8683::after,#tag_li_991::after {
+content:"☑";
+top:124px
+}
+
+#tag_li_6525::after,#tag_li_1239::after,#tag_li_117::after,#tag_li_10::after,#tag_li_11953::after,#tag_li_11281::after,#tag_li_895::after,#tag_li_373::after,#tag_li_2518::after,#tag_li_3695::after,#tag_li_330::after,#tag_li_356::after,#tag_li_12210::after,#tag_li_16425::after,#tag_li_24::after {
+content:"☑";
+top:142px
+}
+#tag_li_32985::after,#tag_li_17057::after,#tag_li_11382::after,#tag_li_13222::after,#tag_li_15704::after {
+content:"☑";
+top:160px
+}
